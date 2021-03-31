@@ -2,7 +2,7 @@
 
 function checkSystem() {
 
-	RELEASE=8
+	RELEASE=7
 
         if [ -e /etc/redhat-release ]; then
 		for ((i=$RELEASE; i<100; i++)); do
@@ -205,7 +205,7 @@ function setupSoftware() {
 	systemctl -q start squid > /dev/null 2>&1
 
 	echo -n "▋"
-	if [ "$(firewall-cmd --permanent --query-port=10000-30000/tcp)" == "no" ]; then firewall-cmd -q --permanent --add-port=10000-30000/tcp > /dev/null 2>&1 ; fi
+	if [ "$(firewall-cmd --permanent --query-port=10000-40000/tcp)" == "no" ]; then firewall-cmd -q --permanent --add-port=10000-40000/tcp > /dev/null 2>&1 ; fi
 
 	echo -n "▋"
 	firewall-cmd -q --reload > /dev/null 2>&1
@@ -226,7 +226,7 @@ function removeSoftware() {
 	systemctl -q disable squid > /dev/null 2>&1
 
 	echo -n "▋"
-	if [ "$(firewall-cmd --permanent --query-port=10000-30000/tcp)" == "yes" ]; then firewall-cmd -q --permanent --remove-port=10000-30000/tcp > /dev/null 2>&1 ; fi
+	if [ "$(firewall-cmd --permanent --query-port=10000-40000/tcp)" == "yes" ]; then firewall-cmd -q --permanent --remove-port=10000-40000/tcp > /dev/null 2>&1 ; fi
 
 	echo -n "▋"
 	firewall-cmd -q --reload > /dev/null 2>&1
