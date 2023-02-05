@@ -150,7 +150,7 @@ function installSoftware() {
 
 	echo -n "▋"
         cd /  > /dev/null 2>&1
-        git clone -q https://github.com/chinashiyu/gfw.press.git > /dev/null 2>&1
+        git clone -q https://github.com/yushengbaigu/gfw.press.git > /dev/null 2>&1
 	cd  > /dev/null 2>&1
 
 }
