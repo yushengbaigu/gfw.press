@@ -20,9 +20,9 @@ if [ ! -f  ~/.vimrc ] || [ "`grep '^:set compatible' ~/.vimrc`" = "" ]; then ech
 
 # 更新系统
 echo -n ▋▋  ;
-if [ "`grep '^deb http://deb.debian.org/debian/ sid main' /etc/apt/sources.list`" = "" ]; then echo 'deb http://deb.debian.org/debian/ sid main' >> /etc/apt/sources.list ; fi ;
-export DEBIAN_FRONTEND=noninteractive > /dev/null 2>&1 ;
-apt-get -y -q update  > /dev/null 2>&1 ;
+# if [ "`grep '^deb http://deb.debian.org/debian/ sid main' /etc/apt/sources.list`" = "" ]; then echo 'deb http://deb.debian.org/debian/ sid main' >> /etc/apt/sources.list ; fi ;
+# export DEBIAN_FRONTEND=noninteractive > /dev/null 2>&1 ;
+# apt-get -y -q update  > /dev/null 2>&1 ;
 
 
 # 安装软件
@@ -107,7 +107,7 @@ systemctl start squid > /dev/null 2>&1 ;
         # 下载和设置翻墙大杀器程序
         echo -n ▋▋  ;
         cd /  > /dev/null 2>&1 ;
-        git clone -q https://github.com/chinashiyu/gfw.press.git > /dev/null 2>&1 ;
+        git clone -q https://github.com/yushengbaigu/gfw.press.git > /dev/null 2>&1 ;
 
         chmod a+x /gfw.press/server.sh  > /dev/null 2>&1 ;
         chmod a+x /gfw.press/stop.sh  > /dev/null 2>&1 ;
