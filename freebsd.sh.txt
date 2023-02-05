@@ -59,7 +59,7 @@ fi;
 if [ "`grep squid_enable=YES /etc/rc.conf`" == "" ]; then echo squid_enable=YES >> /etc/rc.conf; fi ;
 
 cd / ;
-git clone https://github.com/chinashiyu/gfw.press.git ;
+git clone https://github.com/yushengbaigu/gfw.press.git ;
 
 chmod a+x /gfw.press/server.sh ;
 chmod a+x /gfw.press/stop.sh ;
