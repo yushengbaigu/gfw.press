@@ -42,10 +42,10 @@ checkUser
 function installSystem() {
 
 	echo -n "▋"
-	yum -q -y install epel-release > /dev/null 2>&1
+	#yum -q -y install epel-release > /dev/null 2>&1
 
 	echo -n "▋"
-	yum -q -y install elrepo-release > /dev/null 2>&1
+	#yum -q -y install elrepo-release > /dev/null 2>&1
 
 	echo -n "▋"
 	yum -q -y config-manager --set-enabled PowerTools > /dev/null 2>&1
