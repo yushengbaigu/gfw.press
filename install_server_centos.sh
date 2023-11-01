@@ -2,7 +2,7 @@
 
 function checkSystem() {
 
-	RELEASE=7
+	RELEASE=8
 
         if [ -e /etc/redhat-release ]; then
 		for ((i=$RELEASE; i<100; i++)); do
