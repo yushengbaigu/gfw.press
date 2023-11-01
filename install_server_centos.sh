@@ -2,22 +2,22 @@
 
 function checkSystem() {
 
-	RELEASE=8
+	#RELEASE=8
 
-        if [ -e /etc/redhat-release ]; then
+        # if [ -e /etc/redhat-release ]; then
 		for ((i=$RELEASE; i<100; i++)); do
 			OK=$(grep "release $i." /etc/redhat-release)
 			if [ ! "$OK" == "" ]; then
 				return 0
 			fi
 		done
-	fi
+	#fi
 	
 	echo
 	echo "系统不符合安装要求！请使用 CentOS$RELEASE 或者更高版本的系统"
 	echo
 
-	exit 1
+	#exit 1
 
 }
 
