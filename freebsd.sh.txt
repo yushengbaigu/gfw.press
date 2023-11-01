@@ -34,7 +34,7 @@ fi ;
 
 pkg update
 
-pkg install -y openjdk13 pwgen wget squid git
+pkg install -y openjdk11 pwgen wget squid git
 
 if [ -e "/usr/local/etc/squid/squid.conf" ] && [ "`grep 'shutdown_lifetime 3 seconds' /usr/local/etc/squid/squid.conf`" == "" ]; then
         echo "" >> /usr/local/etc/squid/squid.conf
