@@ -51,7 +51,7 @@ function installSystem() {
 	yum -q -y config-manager --set-enabled PowerTools > /dev/null 2>&1
 
 	echo -n "▋"
-	yum -q -y update > /dev/null 2>&1
+	#yum -q -y update > /dev/null 2>&1
 
 	echo -n "▋"
 	yum -q -y install wget iptraf-ng net-tools bind-utils langpacks-zh_CN pwgen tuned firewalld > /dev/null 2>&1
